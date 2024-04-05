@@ -23,9 +23,9 @@ def write_to_file(most_common_words, output_file_path):
             file.write(f"{word}-{count}\n")
 
 if __name__ == "__main__":
-    file_path = 'sample.txt'  # Шлях до вашого файлу
+    file_path = 'sample.txt'  # Шлях до файлу
     output_file_path = 'most_common_words.txt'  # Ім'я вихідного файлу
-    num_words = 10  # Кількість найпопулярніших слів
+    num_words = 10
 
     text = read_file(file_path)
     cleaned_text = clean_text(text)
