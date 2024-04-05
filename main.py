@@ -10,4 +10,9 @@ def clean_text(text):
     """Видаляє зайві символи з тексту."""
     return re.sub(r'[^a-zA-Zа-яА-ЯіІїЇєЄёЁ\s]', '', text)
 
+def find_words_frequency(text, num_words=10):
+    """Знаходить частоту кожного слова в тексті і повертає найпопулярніші слова."""
+    words = text.split()
+    word_freq = Counter(words)
+    return word_freq.most_common(num_words)
 
